@@ -1,5 +1,5 @@
 import React from "react";
 
-export const AddTask = () => {
+export default function AddTask() {
   return <div>AddTask</div>;
-};
+}

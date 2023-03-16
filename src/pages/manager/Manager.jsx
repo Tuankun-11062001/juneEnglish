@@ -1,5 +1,5 @@
 import React from "react";
 
-export const Manager = () => {
+export default function Manager() {
   return <div>Manager</div>;
-};
+}

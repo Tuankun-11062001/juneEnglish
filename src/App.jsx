@@ -1,4 +1,4 @@
-import React from "react";
+import React, { lazy, Suspense } from "react";
 
 import {
   createBrowserRouter,
@@ -6,12 +6,16 @@ import {
   Route,
   RouterProvider,
 } from "react-router-dom";
-import Header from "./components/header/Header";
-import { AddTask } from "./pages/addTask/AddTask";
-import { DetailTask } from "./pages/detailTask/DetailTask";
-import { Home } from "./pages/home/Home";
-import { Manager } from "./pages/manager/Manager";
-import { Practice } from "./pages/practice/Practice";
+
+import Loading from "./components/loading/Loading";
+
+const Header = lazy(() => import("./components/header/Header"));
+const AddTask = lazy(() => import("./pages/addTask/AddTask"));
+const DetailTask = lazy(() => import("./pages/detailTask/DetailTask"));
+const Home = lazy(() => import("./pages/home/Home"));
+const Manager = lazy(() => import("./pages/manager/Manager"));
+const NotFound = lazy(() => import("./pages/notFound/NotFound"));
+const Practice = lazy(() => import("./pages/practice/Practice"));
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -21,10 +25,15 @@ const router = createBrowserRouter(
       <Route path="manager-task" element={<Manager />} />
       <Route path="practice" element={<Practice />} />
       <Route path="dtail-task" element={<DetailTask />} />
+      <Route path="*" element={<NotFound />} />
     </Route>
   )
 );
 
 export default function App() {
-  return <RouterProvider router={router} />;
+  return (
+    <Suspense fallback={<Loading />}>
+      <RouterProvider router={router} />
+    </Suspense>
+  );
 }
