@@ -24,7 +24,7 @@ const router = createBrowserRouter(
       <Route path="add-task" element={<AddTask />} />
       <Route path="manager-task" element={<Manager />} />
       <Route path="practice" element={<Practice />} />
-      <Route path="dtail-task" element={<DetailTask />} />
+      <Route path="detail-task" element={<DetailTask />} />
       <Route path="*" element={<NotFound />} />
     </Route>
   )
