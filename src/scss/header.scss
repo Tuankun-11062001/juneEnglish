@@ -1,0 +1,10 @@
+.header_link {
+  color: rgba(#fff, 0.4);
+  svg {
+    width: 2rem;
+    height: 2rem;
+  }
+  &.active {
+    color: rgb(241, 56, 56);
+  }
+}
