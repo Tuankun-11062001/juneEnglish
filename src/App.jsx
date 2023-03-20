@@ -5,6 +5,7 @@ import {
   createRoutesFromElements,
   Route,
   RouterProvider,
+  Outlet,
 } from "react-router-dom";
 
 import Loading from "./components/loading/Loading";
@@ -24,7 +25,9 @@ const router = createBrowserRouter(
       <Route path="add-task" element={<AddTask />} />
       <Route path="manager-task" element={<Manager />} />
       <Route path="practice" element={<Practice />} />
-      <Route path="detail-task" element={<DetailTask />} />
+      <Route path="detail-task" element={<Outlet />}>
+        <Route path=":id" element={<DetailTask />} />
+      </Route>
       <Route path="*" element={<NotFound />} />
     </Route>
   )
