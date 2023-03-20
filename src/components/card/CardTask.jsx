@@ -9,10 +9,18 @@ import {
   Box,
   Text,
 } from "@chakra-ui/react";
+import { useNavigate } from "react-router-dom";
 
 export default function CardTask() {
+  const navigate = useNavigate();
+
+  const onChangePageDetail = () => {
+    navigate("detail-task/1");
+  };
+
   return (
     <Card
+      onClick={onChangePageDetail}
       w={{
         base: "full",
         md: "calc(50% - 2rem)",
