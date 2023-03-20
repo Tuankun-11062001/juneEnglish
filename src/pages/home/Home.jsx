@@ -1,5 +1,58 @@
 import React from "react";
+import {
+  Container,
+  InputGroup,
+  Input,
+  Flex,
+  Box,
+  Text,
+} from "@chakra-ui/react";
+import { BsSearch } from "react-icons/bs";
+import CardTask from "../../components/card/CardTask";
 
 export default function Home() {
-  return <div>Home</div>;
+  return (
+    <Container maxW="full">
+      <InputGroup
+        pos="relative"
+        left="50%"
+        transform="translateX(-50%)"
+        display="flex"
+        justify="center"
+        alignItems="center"
+        w="50%"
+        mt="2rem"
+        border="1px"
+        borderRadius="1rem"
+        paddingInline="1rem"
+        borderColor="gray.300"
+      >
+        <BsSearch />
+        <Input
+          type="text"
+          placeholder="Search here..."
+          border="unset"
+          fontSize="1.2rem"
+        />
+      </InputGroup>
+
+      <Flex
+        marginInline="-2rem"
+        marginTop="5rem"
+        wrap="wrap"
+        paddingBottom="7rem"
+      >
+        <CardTask />
+        <CardTask />
+        <CardTask />
+        <CardTask />
+        <CardTask />
+        <CardTask />
+        <CardTask />
+        <CardTask />
+        <CardTask />
+        <CardTask />
+      </Flex>
+    </Container>
+  );
 }
