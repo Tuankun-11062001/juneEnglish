@@ -9,10 +9,23 @@ import {
 } from "@chakra-ui/react";
 import { BsSearch } from "react-icons/bs";
 import CardTask from "../../components/card/CardTask";
+import { motion } from "framer-motion";
+
+const pageMotion = {
+  init: {
+    opacity: 0,
+  },
+  open: {
+    opacity: 1,
+    transition:{
+      duration:0.5
+    }
+  },
+};
 
 export default function Home() {
   return (
-    <Container maxW="full">
+    <Container maxW="full" as={motion.div} initial={pageMotion.init} animate={pageMotion.open}>
       <InputGroup
         pos="relative"
         left="50%"

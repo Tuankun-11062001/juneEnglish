@@ -37,7 +37,10 @@ export default function AddTask() {
     const { name, value } = e.target;
     setDataTask((prev) => ({
       ...prev,
-      [name]: value,
+      header:{
+        ...prev.header,
+        [name]:value
+      }
     }));
   };
 
