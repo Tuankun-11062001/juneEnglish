@@ -28,6 +28,8 @@ export default function CardTask() {
         xl: "calc(25% - 2rem)",
       }}
       margin="1rem"
+      borderWidth="thin"
+      borderColor="red"
     >
       <CardHeader>
         <Heading size="md">Hello (n) /heˈləʊ/ : Xin chao</Heading>
