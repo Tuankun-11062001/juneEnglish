@@ -10,6 +10,7 @@ import {
 import { BsSearch } from "react-icons/bs";
 import CardTask from "../../components/card/CardTask";
 import { motion } from "framer-motion";
+import { useSelector } from "react-redux";
 
 const pageMotion = {
   init: {
@@ -17,15 +18,22 @@ const pageMotion = {
   },
   open: {
     opacity: 1,
-    transition:{
-      duration:0.5
-    }
+    transition: {
+      duration: 0.5,
+    },
   },
 };
 
 export default function Home() {
+  const dataTags = useSelector((state) => state.tags.data);
+  console.log(dataTags);
   return (
-    <Container maxW="full" as={motion.div} initial={pageMotion.init} animate={pageMotion.open}>
+    <Container
+      maxW="full"
+      as={motion.div}
+      initial={pageMotion.init}
+      animate={pageMotion.open}
+    >
       <InputGroup
         pos="relative"
         left="50%"
@@ -50,21 +58,14 @@ export default function Home() {
       </InputGroup>
 
       <Flex
-        marginInline="-2rem"
+        // marginInline="-2rem"
         marginTop="5rem"
         wrap="wrap"
         paddingBottom="7rem"
       >
-        <CardTask />
-        <CardTask />
-        <CardTask />
-        <CardTask />
-        <CardTask />
-        <CardTask />
-        <CardTask />
-        <CardTask />
-        <CardTask />
-        <CardTask />
+        {dataTags?.map((item, index) => (
+          <CardTask key={index} type="active" data={item} />
+        ))}
       </Flex>
     </Container>
   );
