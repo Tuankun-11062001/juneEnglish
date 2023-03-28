@@ -1,7 +1,7 @@
 import { Box } from "@chakra-ui/react";
 import React from "react";
 
-export default function Tag({ name }) {
+export default function Tag({ name, getInfo }) {
   // tag css
   const styleImportant = {
     bg: "red.400",
@@ -15,8 +15,10 @@ export default function Tag({ name }) {
   const styleIgnore = {
     bg: "yellow.400",
   };
+
   return (
     <Box
+      onClick={() => getInfo(name)}
       cursor="pointer"
       sx={
         name === "Important"

@@ -10,14 +10,23 @@ import {
   Flex,
   Select,
   Button,
+  Alert,
+  AlertIcon,
+  AlertTitle,
+  AlertDescription,
+  useToast,
 } from "@chakra-ui/react";
 
 import { useQuill } from "react-quilljs";
 
 import "quill/dist/quill.snow.css";
+import { useDispatch } from "react-redux";
+import { addOne } from "../../slices/tagSlice";
 
-export default function FormTask({type}) {
+export default function FormTask({ type }) {
   const { quill, quillRef } = useQuill();
+  const dispatch = useDispatch();
+  const toast = useToast();
   const [dataTask, setDataTask] = useState({
     header: {
       word: "",
@@ -60,7 +69,38 @@ export default function FormTask({type}) {
 
   // handle submit add
   const onSubmitAddTask = () => {
-    console.log(dataTask);
+    const task = dataTask.header;
+    if (
+      task.word === "" ||
+      task.type === "" ||
+      task.example === "" ||
+      task.ipa === "" ||
+      task.level === ""
+    ) {
+      return console.log("missing task");
+    }
+
+    toast({
+      title: "Create successfully.",
+      description: `created word ${dataTask.header.word} successfully`,
+      status: "success",
+      duration: 9000,
+      isClosable: true,
+      position: "top",
+    });
+    dispatch(addOne(dataTask));
+    setDataTask({
+      header: {
+        word: "",
+        ipa: "",
+        type: "",
+        translate: "",
+        example: "",
+        translateExample: "",
+        level: "",
+      },
+      example: "",
+    });
   };
 
   return (
