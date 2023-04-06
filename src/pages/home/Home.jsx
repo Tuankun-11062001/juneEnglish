@@ -9,7 +9,7 @@ import {
   InputLeftElement,
 } from "@chakra-ui/react";
 import { BsSearch } from "react-icons/bs";
-import CardTask from "../../components/card/CardTask";
+import CardTask from "../../components/componentsReuse/card/CardTask";
 import { motion } from "framer-motion";
 import { useSelector } from "react-redux";
 import "../../scss/common.scss";

@@ -1,7 +1,7 @@
 import { Box, Container, Flex, Img, Text } from "@chakra-ui/react";
 import React from "react";
 import { useSelector } from "react-redux";
-import loadingSvg from "../../assets/cube_loading.svg";
+import loadingSvg from "../../../assets/cube_loading.svg";
 export default function Loading() {
   const settingStore = useSelector((state) => state.settings);
 

@@ -8,9 +8,11 @@ import {
   Outlet,
 } from "react-router-dom";
 
-import Loading from "./components/loading/Loading";
+import Loading from "./components/componentsLayoutPage/loading/Loading";
 
-const Header = lazy(() => import("./components/header/Header"));
+const Header = lazy(() =>
+  import("./components/componentsLayoutPage/header/Header")
+);
 const DetailTask = lazy(() => import("./pages/detailTask/DetailTask"));
 const Home = lazy(() => import("./pages/home/Home"));
 const Manager = lazy(() => import("./pages/manager/Manager"));

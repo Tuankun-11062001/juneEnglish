@@ -14,7 +14,7 @@ import {
 } from "@chakra-ui/react";
 
 import { useDispatch, useSelector } from "react-redux";
-import { addOne } from "../../reduxSlice/tagSlice";
+import { addOne } from "../../../reduxSlice/tagSlice";
 const RichText = lazy(() => import("../richText/RichText"));
 
 export default function EditTask({ data }) {

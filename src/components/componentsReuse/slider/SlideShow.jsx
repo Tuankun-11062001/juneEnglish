@@ -1,10 +1,9 @@
 import { Box, Container } from "@chakra-ui/react";
-import { useEffect, useRef } from "react";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Controls from "./controls/Controls";
 import Indicators from "./indicators/Indicators";
 import ItemSlide from "./itemSlide/ItemSlide";
-import "../../scss/slider.scss";
+import "../../../scss/slider.scss";
 
 const SlideShow = ({ controls = false, indicator = false, data, isShow }) => {
   const [currentSlide, setCurrentSlide] = useState(3);

@@ -21,13 +21,13 @@ import {
 } from "@chakra-ui/react";
 import React, { useRef } from "react";
 import { useState } from "react";
-import { data_image } from "../../common/data_image";
-import { updateApp } from "../../reduxSlice/settingSlices";
+import { data_image } from "../../../common/data_image";
+import { updateApp } from "../../../reduxSlice/settingSlices";
 import { useDispatch, useSelector } from "react-redux";
-import SlideShow from "../slider/SlideShow";
-import Music from "../music/Music";
-import Font from "../font/Font";
-import ChangeMode from "../changeMode/ChangeMode";
+import SlideShow from "../../componentsReuse/slider/SlideShow";
+import Music from "../../componentsSettings/music/Music";
+import Font from "../../componentsSettings/font/Font";
+import ChangeMode from "../../componentsSettings/changeMode/ChangeMode";
 
 export default function Setting({ isOpenSetting, onCloseSetting }) {
   const dispatch = useDispatch();

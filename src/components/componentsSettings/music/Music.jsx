@@ -9,8 +9,8 @@ import {
   Text,
 } from "@chakra-ui/react";
 import { BsMusicNoteList } from "react-icons/bs";
-import "../../scss/music.scss";
-import { data_music } from "../../common/data_music";
+import "../../../scss/music.scss";
+import { data_music } from "../../../common/data_music";
 import { motion } from "framer-motion";
 import MusicItem from "./MusicItem";
 
