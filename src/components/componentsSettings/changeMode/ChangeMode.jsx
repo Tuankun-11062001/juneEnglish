@@ -3,7 +3,7 @@ import { useColorMode } from "@chakra-ui/color-mode";
 import { BsFillSunFill, BsFillMoonFill } from "react-icons/bs";
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { changeMode } from "../../reduxSlice/settingSlices";
+import { changeMode } from "../../../reduxSlice/settingSlices";
 
 export default function ChangeMode() {
   const { colorMode, toggleColorMode } = useColorMode();

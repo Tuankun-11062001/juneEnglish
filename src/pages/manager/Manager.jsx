@@ -17,10 +17,10 @@ import { useSelector } from "react-redux";
 import { BsSearch } from "react-icons/bs";
 import { IoIosCloseCircleOutline } from "react-icons/io";
 
-import CardTask from "../../components/card/CardTask";
-import Tag from "../../components/tag/Tag";
-import EditTaskDrawer from "../../components/drawer/EditTaskDrawer";
-import AddTaskDrawer from "../../components/drawer/AddTaskDrawer";
+import CardTask from "../../components/componentsReuse/card/CardTask";
+import Tag from "../../components/componentsTag/tag/Tag";
+import EditTaskDrawer from "../../components/componentsReuse/drawer/EditTaskDrawer";
+import AddTaskDrawer from "../../components/componentsReuse/drawer/AddTaskDrawer";
 
 import "../../scss/common.scss";
 

@@ -11,10 +11,10 @@ import { NavLink, Outlet } from "react-router-dom";
 import { BiHomeAlt2, BiBrain, BiTask } from "react-icons/bi";
 import { MdOutlineLyrics } from "react-icons/md";
 import { IoSettingsOutline } from "react-icons/io5";
-import "../../scss/header.scss";
+import "../../../scss/header.scss";
 import Setting from "../setting/Setting";
 import { useDispatch, useSelector } from "react-redux";
-import { changeMode } from "../../reduxSlice/settingSlices";
+import { changeMode } from "../../../reduxSlice/settingSlices";
 import { useLayoutEffect } from "react";
 
 export default function Header() {

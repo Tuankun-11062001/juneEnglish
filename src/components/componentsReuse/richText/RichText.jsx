@@ -1,5 +1,5 @@
 import { Editor } from "@tinymce/tinymce-react";
-import { initRichText } from "../../common/initRichText";
+import { initRichText } from "../../../common/initRichText";
 
 const RichText = ({ dataExample, name, change }) => {
   return (

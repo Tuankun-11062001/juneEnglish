@@ -11,7 +11,7 @@ import {
   Text,
 } from "@chakra-ui/react";
 import React from "react";
-import { data_font } from "../../common/data_font";
+import { data_font } from "../../../common/data_font";
 
 export default function Font({ data }) {
   const { obj_Font, func_Font } = data;
