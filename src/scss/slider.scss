@@ -1,0 +1,22 @@
+.slider {
+  position: relative;
+  &_container {
+    margin-top: 1rem;
+    display: flex;
+    transition: 2s ease;
+    transition-duration: 1000;
+  }
+  &_setting_button {
+    button {
+      position: absolute;
+      top: 55%;
+      transform: translateY(-50%);
+      &:first-child {
+        left: 0;
+      }
+      &:last-child {
+        right: 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,8 @@
+.music {
+  &_list {
+    &.active {
+      width: 10rem;
+      transition: 1s ease;
+    }
+  }
+}

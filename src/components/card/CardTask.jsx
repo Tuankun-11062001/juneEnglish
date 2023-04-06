@@ -11,6 +11,7 @@ import {
   CardFooter,
   Button,
   Divider,
+  Spacer,
 } from "@chakra-ui/react";
 import { useNavigate } from "react-router-dom";
 import { BsTrash } from "react-icons/bs";
@@ -86,7 +87,7 @@ export default function CardTask({ type, openEdit, data }) {
       </CardBody>
       {type !== "active" && (
         <CardFooter>
-          <Divider />
+          <Spacer />
           <Button
             colorScheme="red"
             w="max-content"

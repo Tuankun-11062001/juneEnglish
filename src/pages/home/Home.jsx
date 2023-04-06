@@ -6,11 +6,13 @@ import {
   Flex,
   Box,
   Text,
+  InputLeftElement,
 } from "@chakra-ui/react";
 import { BsSearch } from "react-icons/bs";
 import CardTask from "../../components/card/CardTask";
 import { motion } from "framer-motion";
 import { useSelector } from "react-redux";
+import "../../scss/common.scss";
 
 const pageMotion = {
   init: {
@@ -26,37 +28,28 @@ const pageMotion = {
 
 export default function Home() {
   const dataTags = useSelector((state) => state.tags.data);
-  console.log(dataTags);
+
   return (
     <Container
-      maxW="full"
+      maxW="80%"
       as={motion.div}
       initial={pageMotion.init}
       animate={pageMotion.open}
+      h="200vh"
     >
-      <InputGroup
-        pos="relative"
-        left="50%"
-        transform="translateX(-50%)"
-        display="flex"
-        justify="center"
-        alignItems="center"
-        w="50%"
-        mt="2rem"
-        border="1px"
-        borderRadius="1rem"
-        paddingInline="1rem"
-        borderColor="gray.300"
-      >
-        <BsSearch />
-        <Input
-          type="text"
-          placeholder="Search here..."
-          border="unset"
-          fontSize="1.2rem"
-        />
-      </InputGroup>
-
+      <Box pt="4rem">
+        <InputGroup
+          pos="relative"
+          left="50%"
+          transform="translateX(-50%)"
+          w="50%"
+          borderRadius="1rem"
+          borderColor="gray.400"
+        >
+          <InputLeftElement children={<BsSearch color="gray" />} />
+          <Input type="text" placeholder="Search here..." fontSize="1.2rem" />
+        </InputGroup>
+      </Box>
       <Flex
         // marginInline="-2rem"
         marginTop="5rem"

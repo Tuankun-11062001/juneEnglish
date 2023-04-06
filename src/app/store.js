@@ -1,8 +1,10 @@
 import { configureStore } from "@reduxjs/toolkit";
-import tagReducer from "../slices/tagSlice";
+import tagReducer from "../reduxSlice/tagSlice";
+import settingReducer from "../reduxSlice/settingSlices";
 
 const rootReducer = {
   tags: tagReducer,
+  settings: settingReducer,
 };
 
 const store = configureStore({

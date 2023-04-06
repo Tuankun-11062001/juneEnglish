@@ -1,0 +1,35 @@
+@import "./setting";
+
+@font-face {
+  font-family: "Alkatra";
+  src: local("Alkatra"),
+    url("./assets/font/Alkatra-VariableFont_wght.ttf") format("truetype");
+  // font-weight: bold;
+}
+
+@font-face {
+  font-family: "DeliciousHandrawn";
+  src: local("DeliciousHandrawn"),
+    url("./assets/font/DeliciousHandrawn-Regular.ttf") format("truetype");
+  // font-weight: bold;
+}
+
+@font-face {
+  font-family: "RobotoBlack";
+  src: local("RobotoBlack"),
+    url("./assets/font/Roboto-Black.ttf") format("truetype");
+  font-weight: "black";
+}
+
+@font-face {
+  font-family: "RobotoBold";
+  src: local("RobotoBold"),
+    url("./assets/font/Roboto-Bold.ttf") format("truetype");
+  font-weight: "bold";
+}
+
+@font-face {
+  font-family: "SourceSansProLight";
+  src: local("SourceSansProLight"),
+    url("./assets/font/SourceSansPro-Light.ttf") format("truetype");
+}
